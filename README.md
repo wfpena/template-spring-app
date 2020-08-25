@@ -49,7 +49,9 @@ Basic CRUD Rest API for Customers, Orders and Products entities.
 
 1. Install Maven and Java (JDK 11).
 
-2. Run `mvn spring-boot:run` in the root of the project.
+2. Download and run H2 Database and set the config in the `application.properties` file.
+
+3. Run `mvn spring-boot:run` in the root of the project.
 
 ### Running unit tests
 
