@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity(name = "PRODUCTS")
 public class Product {
@@ -18,6 +19,7 @@ public class Product {
 
     private String description;
     
+    @NotNull(message = "Product must have a price!")
     private BigDecimal price;
 
     public Long getId() {
