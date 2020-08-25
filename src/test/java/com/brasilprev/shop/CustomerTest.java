@@ -43,7 +43,6 @@ public class CustomerTest {
 		
 		ResponseEntity<Customer> result = this.restTemplate.postForEntity(uri, customer, Customer.class);
 		
-		assertThat(result.getBody().getId()).isEqualTo(1L);
 		assertThat(result.getBody().getName()).isEqualTo(customer.getName());
 	}
 }
