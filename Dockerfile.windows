@@ -1,0 +1,8 @@
+FROM adoptopenjdk/openjdk11:latest
+RUN apt-get update && apt-get install -y dos2unix
+COPY . app/
+WORKDIR /app
+RUN dos2unix mvnw 
+RUN ./mvnw install
+RUN cp application.properties ./target/application.properties
+ENTRYPOINT ["java","-jar","./target/shop-0.0.1-SNAPSHOT.jar"]
