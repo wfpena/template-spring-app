@@ -40,6 +40,18 @@ More information: https://www.h2database.com/html/main.html
     | price       | BigDecimal | false    |
 
 
+### Running with Docker
+
+1. Run the command `docker build -t <name_of_the_image> .`
+
+    > Or `docker build -t <name_of_the_image> -f Dockerfile.windows .` for Windows.
+
+    > The Windows specific Dockerfile was created because of a problem with DOS line endings in the ``mvnw`` file so it uses the ``dos2unix`` dependency inside the image.
+
+2. Run the command `docker run -p 8080:8080 <name_of_the_image>`. By default the application will start at port 8080.
+
+    > The port can be changed in the ``application.properties`` file, in the ``server.port`` property.
+
 ### Running Locally
 
 1. Install Maven and Java (JDK 11).
