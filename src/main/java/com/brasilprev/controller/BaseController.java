@@ -17,7 +17,7 @@ public class BaseController <T> {
 	@Autowired
 	private CrudRepository<T, Long> repo;
 	
-    @RequestMapping
+    @RequestMapping(method = RequestMethod.GET)
     @ResponseBody List<T> listAll() {
         return (List<T>) this.repo.findAll();
     }
