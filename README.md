@@ -63,3 +63,9 @@ More information: https://www.h2database.com/html/main.html
 ### Running unit tests
 
 1. Run `mvn test` in the root of the project.
+
+## Swagger
+
+The API is documented using Swagger. To test the endpoints and access the generated documentation first run the app and then go to `http://localhost:8080/swagger-ui.html#/`.
+
+More on Swagger: https://swagger.io/
