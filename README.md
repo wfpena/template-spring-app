@@ -42,9 +42,9 @@ More information: https://www.h2database.com/html/main.html
 
 ### Running with Docker
 
-1. Run the command `docker build -t <name_of_the_image> .`
+1. Run the command `docker build -t <image_tag> .`
 
-    > Or `docker build -t <name_of_the_image> -f Dockerfile.windows .` for Windows.
+    > Or `docker build -t <image_tag> -f Dockerfile.windows .` for Windows.
 
     > The Windows specific Dockerfile was created because of a problem with DOS line endings in the ``mvnw`` file so it uses the ``dos2unix`` dependency inside the image.
 
@@ -54,11 +54,14 @@ More information: https://www.h2database.com/html/main.html
 
 ### Running Locally
 
-1. Install Maven and Java (JDK 11).
+1. Install Java (JDK 11).
 
-2. Download and run H2 Database and set the config in the `application.properties` file.
+2. Download H2 Database.
 
-3. Run `mvn spring-boot:run` in the root of the project.
+3. Run `.\mvnw spring-boot:run` in the root of the project.
+
+    > `.\mvnw` is a wrapper for the correct Maven version.
+    > You can learn more about ir here: https://www.baeldung.com/maven-wrapper
 
 ### Running unit tests
 
