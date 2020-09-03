@@ -12,32 +12,34 @@ More information: https://www.h2database.com/html/main.html
 
 ### Customer
 
-    | Column                     | Type   | Nullable |
-    |----------------------------|--------|----------|
-    | id                         | Long   | false    |
-    | name                       | String | false    |
-    | individualTaxpayerRegistry | String | false    |
-
+| Column                     | Type        | Nullable |
+|----------------------------|-------------|----------|
+| id                         | Long        | false    |
+| name                       | String      | false    |
+| individualTaxpayerRegistry | String      | false    |
+| orders                     | Set\<Order> | false    |
 
 
 ### Order
 
-    | Column                     | Type   | Nullable |
-    |----------------------------|--------|----------|
-    | id                         | Long   | false    |
-    | description                | String | true     |
+
+| Column                     | Type     | Nullable |
+|----------------------------|----------|----------|
+| id                         | Long     | false    |
+| description                | String   | true     |
+| customer                   | Customer | true     |
 
 
 
 ### Product
 
 
-    | Column      | Type       | Nullable |
-    |-------------|------------|----------|
-    | id          | Long       | false    |
-    | name        | String     | true     |
-    | description | String     | true     |
-    | price       | BigDecimal | false    |
+| Column      | Type       | Nullable |
+|-------------|------------|----------|
+| id          | Long       | false    |
+| name        | String     | true     |
+| description | String     | true     |
+| price       | BigDecimal | false    |
 
 
 ### Running with Docker
