@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity(name = "CUSTOMER")
 public class Customer {
 
@@ -24,6 +26,7 @@ public class Customer {
     private String individualTaxpayerRegistry;
 
     @OneToMany(mappedBy = "customer")
+    @JsonIgnoreProperties("customer")
     private Set<Order> orders;
 
 	public Long getId() {

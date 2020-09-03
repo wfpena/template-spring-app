@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity(name = "ORDERS")
 public class Order {
 
@@ -19,6 +21,7 @@ public class Order {
 
     @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="customer_id")
+    @JsonIgnoreProperties("orders")
     private Customer customer;
 
     public Long getId() {
