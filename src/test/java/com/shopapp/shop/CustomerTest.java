@@ -1,4 +1,4 @@
-package com.brasilprev.shop;
+package com.shopapp.shop;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -13,8 +13,8 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.ResponseEntity;
 
-import com.brasilprev.controller.CustomerController;
-import com.brasilprev.model.Customer;
+import com.shopapp.controller.CustomerController;
+import com.shopapp.model.Customer;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class CustomerTest {

@@ -1,4 +1,4 @@
-package com.brasilprev.controller;
+package com.shopapp.controller;
 
 import java.util.List;
 

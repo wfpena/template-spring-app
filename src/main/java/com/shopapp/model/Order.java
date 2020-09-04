@@ -1,26 +1,28 @@
-package com.brasilprev.model;
-
-import java.math.BigDecimal;
+package com.shopapp.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-@Entity(name = "PRODUCTS")
-public class Product {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@Entity(name = "ORDERS")
+public class Order {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-
     private String description;
-    
-    @NotNull(message = "Product must have a price!")
-    private BigDecimal price;
+
+    @ManyToOne(fetch=FetchType.EAGER)
+    @JoinColumn(name="customer_id")
+    @JsonIgnoreProperties("orders")
+    private Customer customer;
 
     public Long getId() {
         return id;
@@ -38,20 +40,12 @@ public class Product {
         this.description = description;
     }
 
-	public BigDecimal  getPrice() {
-		return price;
-	}
-
-	public void setPrice(BigDecimal  price) {
-		this.price = price;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+    public Customer getCustomer() {
+        return customer;
+    }
+        
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }    
 
 }

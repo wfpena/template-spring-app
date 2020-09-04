@@ -1,8 +1,8 @@
-package com.brasilprev.controller;
+package com.shopapp.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.brasilprev.model.Order;
+import com.shopapp.model.Order;
 
 @RestController()
 @RequestMapping("/orders")

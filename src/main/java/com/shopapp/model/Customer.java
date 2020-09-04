@@ -1,4 +1,4 @@
-package com.brasilprev.model;
+package com.shopapp.model;
 
 import java.util.List;
 import java.util.Set;

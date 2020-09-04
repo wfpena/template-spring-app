@@ -1,10 +1,10 @@
-package com.brasilprev;
+package com.shopapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-@EntityScan("com.brasilprev.model")
+@EntityScan("com.shopapp.model")
 @SpringBootApplication
 public class ShopApplication {
 

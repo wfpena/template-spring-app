@@ -1,6 +1,6 @@
-package com.brasilprev.repository;
+package com.shopapp.repository;
 
-import com.brasilprev.model.Order;
+import com.shopapp.model.Order;
 import org.springframework.data.repository.CrudRepository;
 
 public interface OrderRepository extends CrudRepository<Order, Long> {

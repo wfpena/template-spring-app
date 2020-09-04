@@ -8,11 +8,11 @@
 		<version>2.3.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.brasilprev</groupId>
+	<groupId>com.shopapp</groupId>
 	<artifactId>shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>shop</name>
-	<description>Shop platform for Brasilprev</description>
+	<description>Spring Boot Template - REST API for a Shop platform</description>
 
 	<properties>
 		<java.version>11</java.version>
