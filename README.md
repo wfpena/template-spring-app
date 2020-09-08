@@ -54,11 +54,14 @@ More information: https://www.h2database.com/html/main.html
 
     > The port can be changed in the ``application.properties`` file, in the ``server.port`` property.
 
-### Running Locally
+    > The `application.properties` file is placed inside the Docker image, so the container will start with these configs as default.
+
+### Running Locally (without Docker)
 
 1. Install Java (JDK 11).
 
-2. Download H2 Database.
+2. Download H2 Database at http://www.h2database.com/html/download.html.
+
 
 3. Run `.\mvnw spring-boot:run` in the root of the project.
 
@@ -67,10 +70,10 @@ More information: https://www.h2database.com/html/main.html
 
 ### Running unit tests
 
-1. Run `mvn test` in the root of the project.
+1. Run `.\mvnw test` in the root of the project.
 
 ## Swagger
 
-The API is documented using Swagger. To test the endpoints and access the generated documentation first run the app and then go to `http://localhost:8080/swagger-ui.html#/`.
+The API is documented using Swagger. To access the generated documentation first run the app and then go to `http://localhost:8080/swagger-ui.html#/` where you will be presented with the Swagger UI (it also allows you to test the endpoints).
 
 More on Swagger: https://swagger.io/
