@@ -15,9 +15,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
             .antMatchers("/").permitAll();
             .anyRequest().authenticated()
-            .and()
-            .httpBasic()
-            .authenticationEntryPoint(authenticationEntryPoint);
+            // .and()
+            // .httpBasic()
+            // .authenticationEntryPoint(authenticationEntryPoint);
  
     }
 
