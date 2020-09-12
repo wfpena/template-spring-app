@@ -77,3 +77,12 @@ More information: https://www.h2database.com/html/main.html
 The API is documented using Swagger. To access the generated documentation first run the app and then go to `http://localhost:8080/swagger-ui.html#/` where you will be presented with the Swagger UI (it also allows you to test the endpoints).
 
 More on Swagger: https://swagger.io/
+
+
+## Notes on Releases
+
+* ### [Release v1.0](https://github.com/wfpena/template-spring-app/releases/tag/1.0)
+    * This is a finished version that offers a template for a basic CRUD app, with Docker. Without authentication.
+
+
+## TODO
