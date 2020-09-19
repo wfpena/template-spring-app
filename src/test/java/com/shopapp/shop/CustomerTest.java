@@ -21,18 +21,18 @@ public class CustomerTest {
 
 	@LocalServerPort
 	private int port;
-	
+
 	@Autowired
 	private CustomerController controller;
-	
+
 	@Autowired
 	private TestRestTemplate restTemplate;
-	
+
 	@Test
 	public void contexLoads() throws Exception {
 		assertThat(controller).isNotNull();
 	}
-	
+
 	@Test
 	public void insertsCustomer() throws Exception {
 		final String baseUrl = "http://localhost:" + port + "/customers";
@@ -40,9 +40,11 @@ public class CustomerTest {
 		Customer customer = new Customer();
 		customer.setName("Jorge Leal");
 		customer.setIndividualTaxpayerRegistry("09987602102");
-		
-		ResponseEntity<Customer> result = this.restTemplate.postForEntity(uri, customer, Customer.class);
-		
+
+		ResponseEntity<Customer> result = this.restTemplate
+			.withBasicAuth("user", "pass")
+			.postForEntity(uri, customer, Customer.class);
+
 		assertThat(result.getBody().getName()).isEqualTo(customer.getName());
 	}
 }
