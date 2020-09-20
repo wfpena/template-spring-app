@@ -16,8 +16,6 @@
 
     <properties>
         <java.version>11</java.version>
-        <!-- Skip tests for now to build -->
-        <!-- <maven.test.skip>true</maven.test.skip> -->
     </properties>
 
     <dependencies>
