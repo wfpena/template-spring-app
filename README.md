@@ -72,6 +72,8 @@ More information: https://www.h2database.com/html/main.html
 
 1. Run `.\mvnw test` in the root of the project.
 
+    > Currently the API uses Basic Authentication provided by Spring Security. And creates a default user with username: `user` and password: `pass`. These values are currently hardcoded in the tests code so they can run successfully.
+
 ## Swagger
 
 The API is documented using Swagger. To access the generated documentation first run the app and then go to `http://localhost:8080/swagger-ui.html#/` where you will be presented with the Swagger UI (it also allows you to test the endpoints).
@@ -86,3 +88,5 @@ More on Swagger: https://swagger.io/
 
 
 ## TODO
+
+ * Create env variables file
