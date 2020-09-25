@@ -78,10 +78,6 @@ public class OrderTest {
         
         JSONObject createdOrder = new JSONObject(ordersResponse.getBody());
         assertThat(createdOrder.get("description")).isEqualTo("Order With Customer");
-        
-        // JSONObject referencedCustomer = (JSONObject) createdOrder.getJSONObject("customer");
-        // System.out.println("HEREEEEEE");
-        // System.out.println(referencedCustomer);
     }
 
 }
